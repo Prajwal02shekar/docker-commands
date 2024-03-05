@@ -10,3 +10,24 @@ sudo yum install git -y
 sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
+
+/////execute commands/////
+
+docker images                 [to check images present or not]
+docker ps -a                  [provide running and stop containers list]
+docker pull imagename         [to pull the image]
+docker run -it -d imagename   [to run the docker container]
+docker start containerid      [to start the container]
+docker stop containerid       [to stop the container]
+docker rm containerid         [to remove the container]
+docker rmi imagename          [to delete the image]
+
+docker run -it -d -p 8000:80 imagename   [to run the docker container in particular port]
+docker rm -f conatinerid     [to remove container forcefully]
+
+docker run -it -d --name nameof imagename   [to run the docker container with particular name]
+docker commit containerid dockerhubUN/repname          [it will take backup of running contaier as a docker image]
+
+docker push image name       [to push into docker hub repositary]
+
+
